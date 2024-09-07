@@ -69,23 +69,51 @@ button:focus-visible {
 .drum-circle {
   text-align: center;
   margin-top: 50px;
-}
-
-.drums {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
+
+.drums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
 .drum {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border: 2px solid black;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
+
+input[type="number"] {
+  font-size: 16px; /* Larger font size */
+  padding: 5px;
+  width: 80px; /* Wider input field */
+  margin: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  box-sizing: border-box; /* Ensures padding doesn't break the layout */
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .active {
   background-color: yellow;

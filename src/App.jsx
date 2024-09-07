@@ -103,28 +103,26 @@ const PassTheBeat = () => {
     <div className="drum-circle">
       <div className="controls">
         <button onClick={togglePlay}>{isPlaying ? "Pause" : "Start"}</button>
-        <div>
+        <div className="control-group">
           <label>
-            Speed
             <input
               type="number"
               value={speed}
               onChange={(e) => setSpeed(Number(e.target.value))}
               step={100}
-            />
+            />{" "}
             ms between drums
           </label>
         </div>
-        <div>
+        <div className="control-group">
           <label>
-            Double Hit:
             <input
               type="number"
               value={doubleHitChance}
               onChange={(e) => setDoubleHitChance(Number(e.target.value))}
               step={5}
-            />
-            %
+            />{" "}
+            double hit %
           </label>
         </div>
       </div>
