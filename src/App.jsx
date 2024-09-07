@@ -109,7 +109,7 @@ const PassTheBeat = () => {
               type="number"
               value={speed}
               onChange={(e) => setSpeed(Number(e.target.value))}
-              step={100}
+              step={50}
             />{" "}
             ms between drums
           </label>
